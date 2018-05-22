@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import ScoreStatus from './ScoreStatus';
 import './App.css';
 
 const value1 = Math.floor(Math.random() * 100);
@@ -24,9 +25,7 @@ class App extends Component {
           </div>
           <button>True</button>
           <button>False</button>
-          <p className="text">
-            Your Score: {numCorrect}/{numQuestions}
-          </p>
+          <ScoreStatus numCorrect={numCorrect} numQuestions={numQuestions} />
         </div>
       </div>
     );
