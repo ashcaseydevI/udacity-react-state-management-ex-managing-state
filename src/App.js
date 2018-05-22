@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Challenge from './Challenge';
 import ScoreStatus from './ScoreStatus';
 import './App.css';
 
@@ -19,12 +20,7 @@ class App extends Component {
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
         <div className="game">
-          <h2>Mental Math</h2>
-          <div className="equation">
-            <p className="text">{`${value1} + ${value2} + ${value3} = ${proposedAnswer}`}</p>
-          </div>
-          <button>True</button>
-          <button>False</button>
+          <Challenge value1={value1} value2={value2} value3={value3} proposedAnswer={proposedAnswer} />
           <ScoreStatus numCorrect={numCorrect} numQuestions={numQuestions} />
         </div>
       </div>
